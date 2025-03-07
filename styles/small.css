@@ -17,12 +17,6 @@ p {
     /* Normal */
 }
 
-.nav a {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    /* Bold for navigation links */
-}
-
 .parent {
     display: grid;
     grid-template: auto 1fr auto / auto 1fr auto;
@@ -43,13 +37,6 @@ h1 {
     text-align: center;
     font-weight: bold;
     grid-row: 1 / 2;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 nav {
@@ -113,6 +100,10 @@ nav {
     padding: 1rem;
 }
 
+.main-section h1 {
+    
+}
+
 /* General Card Layout */
 .card {
     display: grid;
@@ -127,8 +118,9 @@ nav {
 }
 
 /* Left side  */
-.left-side {
+.coursework-card {
     background-color: lightgray;
+    grid-row: 1/2;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -185,26 +177,7 @@ nav {
     margin-bottom: 1rem;
 }
 
-/* Styling for lists inside the right-side card */
-.card ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
 
-.card ul li {
-    margin: 0.5rem 0;
-}
-
-.card ul li a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.card ul li a:hover {
-    text-decoration: underline;
-}
 
 footer {
     padding: 2rem;

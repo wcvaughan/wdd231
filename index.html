@@ -7,8 +7,8 @@
     <meta name="description"
         content="WDD 231 - Web Frontend Development 1. Chris Vaughan. Basic layout, HTML structure, CSS grid, responsive navigation.">
     <meta name="author" content="Chris Vaughan">
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/getdates.js" defer></script>
@@ -20,13 +20,15 @@
 <body>
     <div class="parent">
         <header>
-            <img src="images/profile.png" id="profile" alt="A picture of Chris Vaughan" style="width: 100%; max-width: 100px;">
-            <h1>Chris Vaughan</h1>
+            <span>
+                <img src="images/profile.png" id="profile" alt="A picture of Chris Vaughan" style="width: 100%; max-width: 100px;">
+                Chris Vaughan 
+            </span>
             <nav>
-                <button type="button" id="menu"></button>
+                <button type="button"></button>
                 <ul class="navigation wrap">
                     <li><a href="#" title="Home" id="home">Home</a></li>
-                    <li><a href="" title="Chamber" id="chamber">Chamber</a></li>
+                    <li><a href="#" title="Chamber" id="chamber">Chamber</a></li>
                     <li><a href="https://github.com/wcvaughan/wcvaughan" title="GitHub Profile">GitHub Profile</a></li>
                     <li><a href="https://www.linkedin.com/in/william-vaughan-juniorsoftwareengineer"
                             title="LinkedIn">LinkedIn</a></li>
@@ -35,13 +37,23 @@
         </header>
 
         <main class="main-section">
-            <h2>Home</h2>
-            <section class="coursework-card">
-                
+            <h1 id="page-title">Home</h1>
+            <section class="coursework-card" id="coursework-container">
+                <p>Course Work</p>
             </section>
-            <section class="course-card">
+            <section class="alaska-info-card">
+                <img src="" alt="Mat-Su Valley" class="valley-img">
+                <p>Matanuska-Susitna Valley, Alaska</p>
+            </section>
+            <div>
+                <p>Web and Computer Programming Certificate</p>
+                <button type="button" id="all">All</button>
+                <button type="button" id="cse">CSE</button>
+                <button type="button" id="wdd">WDD</button>
+                <section class="courses-container" id="courses-container">
 
-            </section>
+                </section>
+            </div>
         </main>
 
         <footer class="section">

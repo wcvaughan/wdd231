@@ -100,13 +100,27 @@ function displayCourses() {
         courseListContainer.appendChild(card);
     })
 
-}
+} 6
 
 function filterItems(subject){
     let items = document.querySelectorAll('.item');
     let listItems = document.querySelectorAll('.list-item');
 
+    items.forEach(item => {
+        if (subject === 'all' || item.classList.contains(subject.toLowerCase())) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
 
+    listItems.forEach(item => {
+        if (subject === 'all' || item.classList.contains(subject.toLowerCase())) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    })
 }
 
 window.onload = () => {
