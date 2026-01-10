@@ -168,6 +168,7 @@ main h1 {
     height: auto;
     object-fit: cover;
     background-color: #ccc;
+    border-radius: 5px;
 }
 
 /********************* CERTIFICATE *************************/
@@ -188,6 +189,7 @@ main h1 {
     border: 1px solid #ccc;
     background-color: #f2f2f2;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .course-grid {
@@ -200,6 +202,7 @@ main h1 {
     background-color: #ddd;
     padding: 0.75rem;
     text-align: center;
+    border-radius: 5px;
 }
 
 .credits {
@@ -244,4 +247,5 @@ footer {
     height: auto;
     margin: 0.5rem auto 0;
     display: block;
+    border-radius: 5px;
 }
