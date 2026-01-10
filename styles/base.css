@@ -17,6 +17,7 @@
 body {
     margin: 0;
     color: #003D59;
+    font-family: 'Roboto', system-ui, sans-serif;
 }
 
 h1, h2 {
