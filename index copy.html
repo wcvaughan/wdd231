@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 231 - Web Frontend Development 1. Chris Vaughan. Basic layout, HTML structure, CSS grid, responsive navigation.">
+    <meta name="author" content="Chris Vaughan">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+
+    <title>WDD 231: Web Frontend Development 1 - Chris Vaughan</title>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <img src="images/rose-alt.svg" alt="Site Logo" width="48" height="48">
+        <span>Chris Vaughan</span>
+    </div>
+
+    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+</header>
+
+<nav id="nav-bar" class="navigation">
+    <ul class="nav-list">
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Home</h1>
+
+    <!-- ABOUT + PHOTO -->
+    <section class="about-photo">
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                <!-- your content -->
+            </p>
+        </section>
+
+        <section class="photo">
+            <h2>Student Photo</h2>
+            <img src="images/profile.png" alt="Profile photo">
+        </section>
+    </section>
+
+    <!-- CERTIFICATE -->
+    <section class="certificate">
+        <h2>Web and Computer Programming Certificate</h2>
+
+        <div class="filters">
+            <button data-category="all">All</button>
+            <button data-category="CSE">CSE</button>
+            <button data-category="WDD">WDD</button>
+        </div>
+
+        <div class="course-grid">
+            <div class="course-item CSE">CSE 110</div>
+            <div class="course-item WDD">WDD 130</div>
+            <div class="course-item CSE">CSE 111</div>
+            <div class="course-item CSE">CSE 210</div>
+            <div class="course-item WDD">WDD 131</div>
+            <div class="course-item WDD">WDD 231</div>
+        </div>
+
+        <p class="credits">
+            Total Credits: <span id="total-credits">0</span>
+        </p>
+    </section>
+</main>
+
+<footer>
+    <div class="social">
+        <a href="https://www.linkedin.com/in/william-vaughan-juniorsoftwareengineer/" target="_blank">
+            <img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://mastodon.social/explore" target="_blank">
+            <img src="images/mastodon.svg" alt="Mastodon" width="16" height="16">
+        </a>
+        <a href="https://discord.com/" target="_blank">
+            <img src="images/discord.svg" alt="Discord" width="16" height="16">
+        </a>
+        <a href="https://github.com/wcvaughan" target="_blank">
+            <img src="images/github.svg" alt="GitHub" width="16" height="16">
+        </a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> Chris Vaughan, Alaska, USA</p>
+    <p id="lastModified"></p>
+
+    <img src="images/Flag_of_Alaska.png" alt="Flag of Alaska" class="alaska-flag">
+</footer>
+
+</body>
+</html>

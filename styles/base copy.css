@@ -1,16 +1,7 @@
-/**/
-
-/********************* COLOR SCHEME *************************/
-/*
-#2A6B3F
-#003D59
-#003B5C
-*/
-
 /********************* SITE WIDE *************************/
 * {
     box-sizing: border-box;
-    font-family: "Josehin Sans", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     color: #003D59;
 }
 
@@ -28,7 +19,7 @@ h1, h2 {
     grid-template-columns: auto 44px;
     align-items: center;
     padding: 0.75rem 1rem;
-    border-bottom: solid 1px #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .brand {
@@ -38,7 +29,7 @@ h1, h2 {
 }
 
 .site-header img {
-    width: 100%;
+    width: 32px;
     height: auto;
 }
 
@@ -46,9 +37,7 @@ h1, h2 {
 .hamburger {
     background: none;
     border: none;
-    color: #003D59;
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hamburger::before {
@@ -61,7 +50,6 @@ h1, h2 {
 }
 
 /********************* NAVIGATION *************************/
-
 .navigation {
     display: none;
 }
@@ -70,37 +58,31 @@ h1, h2 {
     display: block;
 }
 
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
+.nav-list {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.navigation a {
+.nav-list li a {
     display: block;
-    padding: .8rem 10px;
-    color: #003D59;
+    padding: 0.75rem 1rem;
     text-decoration: none;
-    border-bottom: solid 1px #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
-.navigation li.current {
+.nav-list li.current {
     background-color: #eee;
 }
 
-.navigation a:hover {
-    background-color: #fff;
-}
-
 /********************* MAIN *************************/
-
 main {
     padding: 1rem;
 }
 
 /********************* ABOUT + PHOTO *************************/
 .about-photo {
-    display: block;
+    display: block; /* stacks on mobile */
 }
 
 .about,
@@ -153,28 +135,29 @@ main {
     gap: 0.5rem;
 }
 
+.course-item {
+    background-color: #ddd;
+    padding: 0.75rem;
+    text-align: center;
+}
+
 .credits {
     margin-top: 1rem;
     font-weight: bold;
 }
 
-
 /********************* FOOTER *************************/
-
 footer {
     background-color: #eee;
-    padding: 1rem 10px;
+    padding: 1rem;
     text-align: center;
-}
-
-footer p {
-    color: #003D59;
 }
 
 .social {
     display: flex;
     justify-content: center;
-    column-gap: 8px;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .social a {
@@ -183,15 +166,6 @@ footer p {
     align-items: center;
     width: 44px;
     height: 44px;
-    border: #ccc solid 1px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.social img {
-    width: 22px;
-    height: 22px;
-}
-
-.social a:hover {
-    background-color: #ddd;
 }
