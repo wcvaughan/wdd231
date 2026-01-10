@@ -101,6 +101,12 @@ header span {
     font-weight: 600;
 }
 
+.navigation li.current a::after {
+    content: " (current page)";
+    position: absolute;
+    left: -9999px;
+}
+
 .navigation a:hover {
     background-color: #2A6B3F;
     color: #ffffff;
@@ -124,7 +130,8 @@ main h1 {
 /********************* ABOUT + PHOTO *************************/
 
 .about-photo {
-    display: block;
+    display: grid;
+    gap: 1rem;
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ddd;
@@ -132,12 +139,12 @@ main h1 {
 
 .about,
 .photo {
-    margin-bottom: 1;
+    margin-bottom: 1rem;
 }
 
 .about h2,
 .photo h2,
-certificate h2 {
+.certificate h2 {
     background-color: #003D59;
     color: white;
     padding: 0.5rem;
@@ -149,9 +156,16 @@ certificate h2 {
     padding: 1rem;
 }
 
+.photo {
+    text-align: center;
+}
+
 .photo img {
-    max-height: 200px;
-    width: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 160px;
+    height: auto;
     object-fit: cover;
     background-color: #ccc;
 }

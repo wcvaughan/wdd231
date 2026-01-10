@@ -21,6 +21,25 @@ navItems.forEach(link => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('#nav-bar a');
+    const pageTitle = document.querySelector('main h1');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const pageName = link.dataset.page;
+
+            pageTitle.textContent = pageName;
+
+            document.querySelectorAll('#nav-bar li').forEach(li => {
+                li.classList.remove('current');
+            });
+        });
+    });
+});
+
 
 // Load current date and last modified date
 document.addEventListener('DOMContentLoaded', () => {
