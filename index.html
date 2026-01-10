@@ -13,54 +13,50 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <script src="scripts/course.js" defer></script>
-    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 
     <title>WDD 231: Web Frontend Development 1 - Chris Vaughan</title>
 </head>
 
 <body>
 
-    <header class="site-header">
-        <div class="brand">
-            <img src="images/rose-alt.svg" alt="Site Logo" width="512" height="512">
-            <span>Chris Vaughan</span>
-        </div>
-        <button id="ham-btn" class="hamburger"></button>
+    <header>
+        <img src="images/rose-alt.svg" alt="Site Logo" width="512" height="512">
+        <span>Chris Vaughan</span>
+        <button 
+            id="ham-btn" 
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-bar">
+        </button>
     </header>
-
+    
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="#">Home</a></li>
-            <li class="current"><a href="#">Chamber Project</a></li>
+            <li><a href="#">Chamber Project</a></li>
             <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- ABOUT ME -->
+        <h1>Home</h1>
+
+        <!-- ABOUT + PHOTO -->
         <section class="about-photo">
             <section class="about">
                 <h2>About Me</h2>
                 <p>
-
+                    <!-- your content -->
                 </p>
             </section>
 
             <section class="photo">
-                <img src="images/profile.png" alt="profile photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.png" alt="Portrait of Chris Vaughan">
             </section>
         </section>
-
-
-        <!-- <section class="course-info">
-            <div class="location">
-                <h2>Matanuska-Susitna Valley, Alaska</h2>
-                <img src="images/mat_su_valley.png" alt="Hatcher Pass">
-                <p>Hatcher Pass</p>
-            </div>
-        </section> -->
-
 
         <!-- CERTIFICATE -->
         <section class="certificate">
@@ -87,29 +83,27 @@
         </section>
     </main>
 
-    </main>
     <footer>
         <div class="social">
-            <a href="https://www.linkedin.com/in/william-vaughan-juniorsoftwareengineer/" target="_blank">
-                <img src="images/linkedin.svg" alt="Linkedin" width="16" height="16">
-            </a>
-            <a href="https://mastodon.social/explore" target="_blank">
-                <img src="images/mastodon.svg" alt="Mastodon" width="16" height="16">
-            </a>
-            <a href="https://discord.com/" target="_blank">
-                <img src="images/discord.svg" alt="Discord" width="16" height="16">
-            </a>
-            <a href="https://github.com/wcvaughan" target="_blank">
-                <img src="images/github.svg" alt="GitHub" width="16" height="16">
-            </a>
-        </div>
+        <a href="https://www.linkedin.com/in/william-vaughan-juniorsoftwareengineer/" target="_blank">
+            <img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://mastodon.social/explore" target="_blank">
+            <img src="images/mastodon.svg" alt="Mastodon" width="16" height="16">
+        </a>
+        <a href="https://discord.com/" target="_blank">
+            <img src="images/discord.svg" alt="Discord" width="16" height="16">
+        </a>
+        <a href="https://github.com/wcvaughan" target="_blank">
+            <img src="images/github.svg" alt="GitHub" width="16" height="16">
+        </a>
+    </div>
 
-        <p>&copy; <span id="currentyear"></span> Chris Vaughan, Alaska, USA</p>
-        <p id="lastModified"></p>
-        
-        <img src="images/Flag_of_Alaska.png" alt="Flag of Alaska" class="alaska-flag">
+    <p>&copy; <span id="currentyear"></span> Chris Vaughan, Alaska, USA</p>
+    <p id="lastModified"></p>
+
+    <img src="images/Flag_of_Alaska.png" alt="Flag of Alaska" class="alaska-flag">
     </footer>
-    <script src="scripts/navigation.js" defer></script>
 </body>
 
 </html>

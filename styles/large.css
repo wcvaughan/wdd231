@@ -1,26 +1,68 @@
 @media only screen and (min-width: 38rem) {
-    
-    header, main, nav, footer {
+
+    header, 
+    main, 
+    nav, 
+    footer {
         max-width: 900px;
         margin: 0 auto;
     }
 
+
+    /* *********** HEADER ************ */
     header {
         grid-template-columns: 24px auto;
     }
-    
+
     .hamburger {
         display: none;
     }
 
+    /* *********** NAVIGATION ************ */
+
     .navigation {
         display: block;
+        border-bottom: solid 1px #eee;
     }
+
     .navigation ul {
         display: flex;
+        justify-content: center;
     }
 
     .navigation a {
         border: none;
+        padding: 0.75rem 1.5rem;
     }
+
+    /* *********** ABOUT + PHOTO ************ */
+
+    .about-photo {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .about,
+    .photo {
+        margin-bottom: 0;
+    }
+
+    /* *********** CERTIFICATE ************ */
+
+    .filters,
+    .course-grid,
+    .credits {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* *********** FOOTER ************ */
+
+
+    .alaska-flag {
+    max-width: 90px;
+}
 }
