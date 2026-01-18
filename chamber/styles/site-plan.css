@@ -1,0 +1,182 @@
+/* -----------------------------
+   CSS RESET & BASE STYLES
+-------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #F4F7F8; /* Frosted Gray */
+    color: #1F2933; /* Charcoal Slate */
+    line-height: 1.6;
+}
+
+/* -----------------------------
+   MAIN LAYOUT
+-------------------------------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* -----------------------------
+   HEADINGS & TYPOGRAPHY
+-------------------------------- */
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #2E5E77; /* Glacier Blue */
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 80ch;
+}
+
+/* -----------------------------
+   SECTION STYLING
+-------------------------------- */
+.sitename,
+.sitepurpose,
+.schema,
+.typography,
+.wireframe {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Site name emphasis */
+.sitename h2 {
+    margin: 0;
+    text-align: center;
+}
+
+/* -----------------------------
+   COLOR SCHEMA LIST
+-------------------------------- */
+.schema ul,
+.typography ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.schema li,
+.typography li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+/* Color swatches */
+.color-block {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 0.75rem;
+    border: 1px solid #ccc;
+}
+
+/* -----------------------------
+   TYPOGRAPHY SECTION
+-------------------------------- */
+.typography li {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -----------------------------
+   WIREFRAME IMAGES
+-------------------------------- */
+.wireframe figure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 0;
+}
+
+.wireframe img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+/* -----------------------------
+   ACCESSIBILITY & RESPONSIVENESS
+-------------------------------- */
+@media (max-width: 600px) {
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* -----------------------------
+   GENERIC SECTION STYLING
+-------------------------------- */
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* -----------------------------
+   LIST STYLES
+-------------------------------- */
+section ul {
+    padding-left: 1.25rem;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+}
+
+/* -----------------------------
+   PERSONAS
+-------------------------------- */
+.personas h3 {
+    color: #3F5D3A; /* Spruce Green */
+    margin-top: 1.5rem;
+}
+
+.persona {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.persona:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.persona h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    color: #2E5E77;
+}
+
+/* -----------------------------
+   SCENARIOS & SEO
+-------------------------------- */
+.scenarios li,
+.seo li {
+    max-width: 80ch;
+}

@@ -1,0 +1,49 @@
+.card-grid {
+    display: grid;
+    gap: 1;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 1rem;
+}
+
+.card-grid section {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-grid h2 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #003D59;
+}
+
+.card-grid p {
+    font-size: 0.85rem;
+    margin: 0.25rem 0;
+}
+
+.card-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 325px;
+    height: 200px;
+    object-fit: cover;
+}

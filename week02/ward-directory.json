@@ -1,0 +1,38 @@
+{
+    "last_name": "Smith",
+    "date_of_move_in": "2010-01-01",
+    "family_size": 6,
+    "visited_by_bishopric": false,
+    "family_info": [
+        {
+            "name": "Charles Smith",
+            "gender": "Male",
+            "birthdate": "1985-01-01"
+        },
+        {
+            "name": "Emily Smith",
+            "gender": "Female",
+            "birthdate": "1987-05-14"
+        },
+        {
+            "name": "Jacob Smith",
+            "gender": "Male",
+            "birthdate": "2008-09-03"
+        },
+        {
+            "name": "Olivia Smith",
+            "gender": "Female",
+            "birthdate": "2011-02-22"
+        },
+        {
+            "name": "Ethan Smith",
+            "gender": "Male",
+            "birthdate": "2014-07-18"
+        },
+        {
+            "name": "Sophia Smith",
+            "gender": "Female",
+            "birthdate": "2017-11-30"
+        }
+    ]
+}
