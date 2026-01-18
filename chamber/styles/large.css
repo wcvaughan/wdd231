@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .navigation a {
+        padding: 0;
+    }
+
+    .navigation a:hover {
+        background: none;
+        text-decoration: underline;
+    }
+}

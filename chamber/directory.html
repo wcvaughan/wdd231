@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="WDD 231 - Web Frontend Development Chris Vaughan Chamber of Commerce Project">
+    <meta name="author" content="Chris Vaughan">
+    <meta property="og:description" content="A project page for the Palmer Chamber of Commerce.">
+    <meta property="og:image" content="https://themilepost.com/wp-content/uploads/2020/04/PalmerSR-3-scaled-e1593061064331-2048x1259.jpg">
+    <meta property="og:title" content="Palmer Chamber of Commerce - WDD231 Chris Vaughan">
+    <meta property="og:url" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="">
+    <link rel="icon" href="images/">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="data/members.js" defer></script>
+
+    <title>Palmer Chamber of Commerce</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="branding">
+            <img src="images/" alt="Site Logo" width="512" height="512">
+            <span>Palmer Chamber of Commerce</span>
+        </div>
+        
+        <button 
+            id="ham-btn" 
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-bar">
+        </button>
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="#" data-page="Home">Home</a></li>
+                <li><a href="#" data-page="Directory">Directory</a></li>
+                <li><a href="#" data-page="Join">Join</a></li>
+                <li><a href="#" data-page="Discover">Discover</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+
+    <main>
+        <!-- Hero Image -->
+        <img src="" alt="Image of Palmer Water Tower">
+        <h1>Directory</h1>
+
+        <!-- Grid / List toggle buttons -->
+        <div class="view-toggle">
+            <button id="gridView" aria-label="Grid view" class="active">Grid</button>
+            <button id="listView" aria-label="List view">List</button>
+        </div>
+        <!-- Company Cards -->
+        <div class="company-cards">
+        </div>
+    </main>
+
+    <footer>
+        <div class="social">
+        <a href="" target="_blank">
+            <img src="images/" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://mastodon.social/explore" target="_blank">
+            <img src="images/mastodon.svg" alt="Mastodon" width="16" height="16">
+        </a>
+        <a href="" target="_blank">
+            <img src="images/" alt="Youtube" width="16" height="16">
+        </a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> Chris Vaughan, Alaska, USA</p>
+    <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>

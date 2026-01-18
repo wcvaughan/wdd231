@@ -1,0 +1,232 @@
+/*********************
+    CSS VARIABLES
+*********************/
+:root {
+    --bg-color: #F4F7F8;
+    --text-color: #1F2933;
+    --header-bg: #2E5E77;
+    --accent-color: #3F5D3A;
+    --border-color: #ddd;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --header-bg: #1f1f1f;
+    --accent-color: #2a2a2a;
+    --border-color: #333;
+}
+
+/*********************
+    GLOBAL STYLES
+*********************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+    margin: 0.5rem 0;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/*********************
+    HEADER
+*********************/
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--header-bg);
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.branding img {
+    width: 48px;
+    height: 48px;
+}
+
+.branding span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/*********************
+    NAVIGATION
+*********************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navigation a:hover {
+    background-color: var(--accent-color);
+}
+
+/*********************
+    HAMBURGER
+*********************/
+.hamburger {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/*********************
+    THEME TOGGLE
+*********************/
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/*********************
+    MAIN
+*********************/
+main {
+    padding: 1rem;
+}
+
+/*********************
+    VIEW TOGGLE
+*********************/
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--header-bg);
+    background-color: var(--bg-color);
+    color: var(--header-bg);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.view-toggle button.active {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/*********************
+    COMPANY CARDS
+*********************/
+.company-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Grid view */
+.company-cards.grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* List view */
+.company-cards.list {
+    grid-template-columns: 1fr;
+}
+
+.company-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.company-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* List layout specifics */
+.company-cards.list .company-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+}
+
+.company-cards.list img {
+    width: 150px;
+}
+
+/*********************
+    FOOTER
+*********************/
+footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.social a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}

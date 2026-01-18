@@ -1,0 +1,81 @@
+{
+  "companies": [
+    {
+      "companyName": "Glacier Creek Brewing Co.",
+      "address": "320 E Dahlia Ave, Palmer, AK 99645",
+      "phone": "907-555-4101",
+      "website": "https://www.glaciercreekbrewing.com",
+      "image": "glacier-creek-brewing.jpg",
+      "membershipLevel": 3,
+      "category": "Restaurant & Brewery",
+      "description": "A community-focused brewpub offering small-batch craft beer and locally inspired meals.",
+      "yearFounded": 2017
+    },
+    {
+      "companyName": "Matanuska Outdoor Gear",
+      "address": "845 S Alaska St, Palmer, AK 99645",
+      "phone": "907-555-2234",
+      "website": "https://www.matanuskaoutdoorgear.com",
+      "image": "matanuska-outdoor-gear.jpg",
+      "membershipLevel": 2,
+      "category": "Retail & Outdoor Equipment",
+      "description": "Specializing in outdoor gear and apparel for hiking, camping, and Alaskan adventures.",
+      "yearFounded": 2018
+    },
+    {
+      "companyName": "Valley Family Dental",
+      "address": "1120 E Bogard Rd, Palmer, AK 99645",
+      "phone": "907-555-7788",
+      "website": "https://www.valleyfamilydentalak.com",
+      "image": "valley-family-dental.jpg",
+      "membershipLevel": 1,
+      "category": "Healthcare",
+      "description": "Providing comprehensive dental care for families throughout the Mat-Su Valley.",
+      "yearFounded": 2009
+    },
+    {
+      "companyName": "Arctic Roots Landscaping",
+      "address": "675 N Trunk Rd, Palmer, AK 99645",
+      "phone": "907-555-6622",
+      "website": "https://www.arcticrootslandscaping.com",
+      "image": "arctic-roots-landscaping.jpg",
+      "membershipLevel": 2,
+      "category": "Home & Garden Services",
+      "description": "Landscaping and snow management services designed for Southcentral Alaska climates.",
+      "yearFounded": 2012
+    },
+    {
+      "companyName": "Palmer Tech Solutions",
+      "address": "410 W Evergreen Ave, Palmer, AK 99645",
+      "phone": "907-555-9901",
+      "website": "https://www.palmertechsolutions.com",
+      "image": "palmer-tech-solutions.jpg",
+      "membershipLevel": 1,
+      "category": "IT & Professional Services",
+      "description": "Offering IT support, website development, and digital solutions for local businesses.",
+      "yearFounded": 2020
+    },
+    {
+      "companyName": "Colony Coffee Roasters",
+      "address": "155 S Alaska St, Palmer, AK 99645",
+      "phone": "907-555-3344",
+      "website": "https://www.colonycoffeeroasters.com",
+      "image": "colony-coffee-roasters.jpg",
+      "membershipLevel": 3,
+      "category": "Coffee & Café",
+      "description": "Small-batch coffee roaster focused on ethically sourced beans and community gathering.",
+      "yearFounded": 2016
+    },
+    {
+      "companyName": "Pioneer Peak Realty",
+      "address": "980 E Parks Hwy, Palmer, AK 99645",
+      "phone": "907-555-8810",
+      "website": "https://www.pioneerpeakrealty.com",
+      "image": "pioneer-peak-realty.jpg",
+      "membershipLevel": 2,
+      "category": "Real Estate",
+      "description": "Helping families and businesses find homes and commercial properties in the Mat-Su Valley.",
+      "yearFounded": 2007
+    }
+  ]
+}
