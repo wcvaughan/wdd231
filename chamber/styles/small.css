@@ -211,7 +211,7 @@ main h1 {
 }
 
 .company-card h3 {
-    mask-border: var(--space-xs);
+    margin-bottom: var(--space-xs);
 }
 
 .company-card p {

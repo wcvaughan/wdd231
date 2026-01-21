@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    content="WDD 231 - Web Frontend Development Chris Vaughan Chamber of Commerce Project">
+    <meta name="description" content="WDD 231 - Web Frontend Development Chris Vaughan Chamber of Commerce Project">
     <meta name="author" content="Chris Vaughan">
     <meta property="og:description" content="A project page for the Palmer Chamber of Commerce.">
-    <meta property="og:image" content="">
-    <meta property="og:title" content="Palmer Chamber of Commerce - WDD231 Chris Vaughan">
+    <meta property="og:image" content="https://wcvaughan.github.io/wdd231/chamber/images/pexels-emma-buchman.jpg">
+    <meta property="og:title" content="Home | Palmer Chamber of Commerce">
     <meta property="og:url" content="https://wcvaughan.github.io/wdd231/chamber/index.html">
 
+    <!-- Google Fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="images/penguin.ico">
+
+    <!-- Google Fonts stylesheet (REQUIRED) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 
-    <title>Home</title>
+    <title>Home | Palmer Chamber of Commerce</title>
 </head>
 
 <body>
@@ -50,13 +55,57 @@
     </header>
     
 
-    <main>
-        <!-- Hero Image -->
-        <img src="images/pexels-emma-buchman.jpg" alt="Hatcher Pass Alaska - courtesy of Emma Buchman">
-        <h1>Home</h1>
+<main>
 
-    </main>
+    <!-- HERO -->
+    <section class="hero">
+        <picture>
+            <source srcset="images/pexels-emma-buchman.jpg" media="(min-width: 768px)">
+            <img src="images/pexels-emma-buchman.jpg" alt="Hatcher Pass, Alaska">
+        </picture>
 
+        <div class="hero-content">
+            <h1>Palmer Chamber of Commerce</h1>
+            <p>Supporting Local Business. Strengthening Community.</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+    </section>
+
+    <!-- CURRENT EVENTS -->
+    <section class="events">
+        <h2>Current Events</h2>
+        <ul>
+            <li><strong>March 15:</strong> Business Networking Breakfast</li>
+            <li><strong>April 2:</strong> Small Business Workshop</li>
+            <li><strong>April 20:</strong> Spring Community Market</li>
+        </ul>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="weather">
+        <h2>Palmer Weather</h2>
+        <div class="weather-current">
+            <p id="current-temp"></p>
+            <p id="weather-desc"></p>
+        </div>
+
+        <div class="forecast">
+            <h3>3-Day Forecast</h3>
+            <ul>
+                <li id="day1"></li>
+                <li id="day2"></li>
+                <li id="day3"></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MEMBER SPOTLIGHTS -->
+    <section class="spotlights">
+        <h2>Member Spotlights</h2>
+        <div class="spotlight-cards"></div>
+    </section>
+
+</main>
     <footer>
         <div class="social">
         <a href="" target="_blank">
