@@ -108,8 +108,10 @@ function createCompanyCard(companies) {
     description.textContent = company.description;
     yearFounded.textContent = `Founded: ${company.yearFounded}`;
 
-    card.append(
-        image,
+    const info = document.createElement("div");
+    info.classList.add("company-info");
+
+    info.append(
         name,
         address,
         phone,
@@ -118,6 +120,7 @@ function createCompanyCard(companies) {
         description,
         yearFounded
     );
+    card.append(image, info);
     card.classList.add("company-card");
 
     document.querySelector(".company-cards").appendChild(card);

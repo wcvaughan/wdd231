@@ -1,5 +1,21 @@
 @media (min-width: 768px) {
 
+    /*********************
+        HEADER
+    *********************/
+
+    .site-header {
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    .branding span {
+        font-size: 1.4rem;
+    }
+
+    /*********************
+        NAVIGATION
+    *********************/
+
     .hamburger {
         display: none;
     }
@@ -10,15 +26,70 @@
 
     .navigation ul {
         display: flex;
-        gap: 1.5rem;
+        gap: var(--space-lg);
     }
 
     .navigation a {
         padding: 0;
+        font-weight: 600;
     }
 
     .navigation a:hover {
         background: none;
         text-decoration: underline;
+    }
+
+    /*********************
+        MAIN LAYOUT
+    *********************/
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-xl);
+    }
+
+    main h1 {
+        margin-bottom: var(--space-lg);
+    }
+
+    /*********************
+        VIEW TOGGLE
+    *********************/
+    .view-toggle {
+        margin-bottom: var(--space-xl);
+    }
+
+    /*********************
+        COMPANY CARDS
+    *********************/
+    .company-cards.grid {
+        gap: var(--space-xl);
+    }
+
+    .company-card {
+        padding: var(--space-lg);
+    }
+
+    .company-card h3 {
+        font-size: 1.1rem;
+    }
+
+    /*********************
+        LIST VIEW
+    *********************/
+    .company-cards.list .company-card {
+        grid-template-columns: 180px 1fr;
+        gap: var(--space-lg);
+    }
+
+    .company-cards.list img {
+        width: 180px;
+    }
+
+    /*********************
+        FOOTER
+    *********************/
+    footer {
+        padding: var(--space-xl);
     }
 }
