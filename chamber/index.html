@@ -55,15 +55,17 @@
     </header>
     
 
-<main>
+<main class="page">
 
     <!-- HERO -->
     <section class="hero">
-        <picture>
-            <source srcset="images/hero-image.jpg" media="(min-width: 768px)">
-            <img src="images/hero-image.jpg" alt="Hatcher Pass, Alaska">
-        </picture>
-
+        <img 
+            src="images/hero-image.jpg"
+            alt="Hatcher Pass"
+            loading="eager"
+            width="1600"
+            height="800"
+        >
         <div class="hero-content">
             <h1>Palmer Chamber of Commerce</h1>
             <p>Supporting Local Business. Strengthening Community.</p>
@@ -81,27 +83,33 @@
         </ul>
     </section>
 
-    <!-- WEATHER -->
-    <section class="weather">
-        <h2>Palmer Weather</h2>
-        <div class="weather-current">
-            <p id="current-temp"></p>
-            <p id="weather-desc"></p>
-        </div>
+<!-- WEATHER -->
+<section class="weather">
+    <h2>Weather in Palmer</h2>
 
-        <div class="forecast">
-            <h3>3-Day Forecast</h3>
-            <ul>
-                <li id="day1"></li>
-                <li id="day2"></li>
-                <li id="day3"></li>
-            </ul>
-        </div>
-    </section>
+    <!-- Current Weather -->
+    <div class="current-weather">
+        <figure>
+            <img id="weather-icon" alt="">
+            <figcaption id="weather-desc"></figcaption>
+        </figure>
+
+        <p>
+            Current Temperature:
+            <span id="current-temp"></span>
+        </p>
+    </div>
+
+    <!-- Forecast -->
+    <div class="forecast">
+        <h3>3-Day Forecast</h3>
+        <ul id="forecast-list"></ul>
+    </div>
+</section>
+
 
     <!-- MEMBER SPOTLIGHTS -->
     <section class="spotlights">
-        <h2>Member Spotlights</h2>
         <div class="spotlight-cards"></div>
     </section>
 

@@ -1,28 +1,42 @@
-const apiKey = "YOUR_API_KEY";
-const lat = 61.5995;
-const lon = -149.1126;
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('#weather-desc');
+const forecastList = document.querySelector('#forecast-list');
 
-const currentTemp = document.querySelector("#current-temp");
-const weatherDesc = document.querySelector("#weather-desc");
+const myKey = 'eea8226f5c4bc8beab79872446c38eb1';
+const myLat = '49.7';
+const myLon = '6.64';
 
-const day1 = document.querySelector("#day1");
-const day2 = document.querySelector("#day2");
-const day3 = document.querySelector("#day3");
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=imperial`;
 
-const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
 
-async function getWeather() {
-    const response = await fetch(url);
-    const data = await response.json();
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
 
-    // Current
-    currentTemp.textContent = `Current: ${Math.round(data.list[0].main.temp)}°F`;
-    weatherDesc.textContent = data.list[0].weather[0].description;
+        const data = await response.json();
+        console.log(data);
+        displayResults(data);
 
-    // Forecast (24h intervals)
-    day1.textContent = `Tomorrow: ${Math.round(data.list[8].main.temp)}°F`;
-    day2.textContent = `Day 2: ${Math.round(data.list[16].main.temp)}°F`;
-    day3.textContent = `Day 3: ${Math.round(data.list[24].main.temp)}°F`;
+    } catch (error) {
+        console.error("Weather API error:", error);
+        currentTemp.textContent = "N/A";
+        captionDesc.textContent = "Unable to load weather data.";
+    }
 }
 
-getWeather();
+function displayResults(data) {
+    currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`;
+
+    const icon = data.weather[0].icon;
+    const description = data.weather[0].description;
+
+    weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherIcon.alt = description;
+    captionDesc.textContent = description;
+}
+
+apiFetch();

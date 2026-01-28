@@ -52,6 +52,10 @@
         margin-bottom: var(--space-lg);
     }
 
+    .spotlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     /*********************
         VIEW TOGGLE
     *********************/
