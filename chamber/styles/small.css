@@ -188,7 +188,23 @@ main h1 {
     background: rgba(0, 0, 0, 0.35);
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: var(--space-md);
+}
+
+.hero-content h1,
+.hero-content p {
+    max-width: 22rem;
+    margin-inline: auto;
+}
+
+.hero-content h1 {
+    font-size: clamp(1.3rem, 5vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: clamp(0.9 rem, 3.5vw, 1.25rem);
+    line-height: 1.4;
 }
 
 .cta {
