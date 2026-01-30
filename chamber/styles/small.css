@@ -394,7 +394,6 @@ main h1 {
     FOOTER
 *********************/
 footer {
-    padding: var(--space-lg);
     text-align: center;
     border-top: 1px solid var(--border-color);
     padding: var(--space-md);
