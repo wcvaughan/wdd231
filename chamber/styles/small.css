@@ -116,6 +116,11 @@ button:focus-visible {
     color: #ffffff;
 }
 
+.navigation a.active {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
 .navigation a:hover {
     text-decoration: underline;
 }
