@@ -104,13 +104,14 @@ button:focus-visible {
 
 .navigation ul {
     list-style: none;
-    margin: 0;
+    margin: var(--space-md);
     padding: 0;
 }
 
 .navigation a {
-    display: block;
-    padding: 0.75rem 1rem;
+    display: grid;
+    padding: var(--space-md);
+    align-items: center;
     text-decoration: none;
     color: #ffffff;
 }
@@ -169,12 +170,12 @@ main h1 {
 .hero {
     position: relative;
     overflow: hidden;
+    margin: var(--space-md);
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
@@ -185,11 +186,16 @@ main h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    padding: var(--space-md);
+    max-width: 90%;
+    margin: 0 auto;
+
     background: rgba(0, 0, 0, 0.35);
     color: #fff;
-    text-align: center;
-    padding: var(--space-md);
 }
+
 
 .hero-content h1,
 .hero-content p {
@@ -198,14 +204,16 @@ main h1 {
 }
 
 .hero-content h1 {
-    font-size: clamp(1.3rem, 5vw, 2.5rem);
+    font-size: clamp(1.4rem, 5vw, 2.5rem);
     line-height: 1.2;
+    margin-bottom: var(--space-sm);
 }
 
 .hero-content p {
-    font-size: clamp(0.9 rem, 3.5vw, 1.25rem);
-    line-height: 1.4;
+    font-size: clamp(0.9rem, 3.5vw, 1.25rem);
+    max-width: 40ch;
 }
+
 
 .cta {
     margin-top: var(--space-md);
@@ -217,7 +225,25 @@ main h1 {
     font-weight: 600;
 }
 
+.events {
+    border: 1px solid var(--border-color);
+    padding: var(--space-md);
+    border-radius: 6px;
+    margin: var(--space-xl) 0;
+    align-items: center;
+    text-align: center;
+}
+
 .weather {
+    border: 1px solid var(--border-color);
+    padding: var(--space-md);
+    border-radius: 6px;
+    margin: var(--space-xl) 0;
+    align-items: center;
+    text-align: center;
+}
+
+.forecast {
     border: 1px solid var(--border-color);
     padding: var(--space-md);
     border-radius: 6px;
@@ -237,6 +263,7 @@ main h1 {
     padding: var(--space-sm);
     border-radius: 4px;
     text-align: center;
+    align-items: center;
 }
 
 /*********************
@@ -286,6 +313,8 @@ main h1 {
     border: 1px solid var(--border-color);
     padding: var(--space-md);
     border-radius: 6px;
+    align-items: center;
+    text-align: center;
 }
 
 .company-card img {
@@ -318,7 +347,8 @@ main h1 {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: var(--space-md);
-    align-items: start;
+    align-items: center;
+    text-align: center;
 }
 
 .company-cards.list img {
@@ -328,23 +358,25 @@ main h1 {
 /*********************
     SPOTLIGHT CARDS
 *********************/
-.spotlights {
-    display: grid;
-    grid-template-columns: 1fr;
+.spotlight-cards {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-md);
 }
 
-
 .spotlight-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: var(--space-md);
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 .spotlight-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    display: block;
+    border-radius: 4px;
+    margin-bottom: var(--space-sm);
 }
 
 .spotlight-card a,

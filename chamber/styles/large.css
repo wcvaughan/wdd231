@@ -52,9 +52,53 @@
         margin-bottom: var(--space-lg);
     }
 
-    .spotlights {
-        grid-template-columns: repeat(3, 1fr);
+    /* HOME TOP ROW */
+    .home-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
     }
+
+    .events,
+    .weather,
+    .forecast {
+        margin: 0;
+    }
+    
+
+    /* SPOTLIGHTS ROW */
+    .spotlights {
+        display: grid;
+    }
+
+    .events,
+    .weather,
+    .forecast,
+    .spotlight-card {
+        height: 100%;
+    }
+
+
+    .spotlight-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .spotlight-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+    .spotlight-card p,
+    .spotlight-card a {
+    overflow-wrap: anywhere;
+    gap: var(--space-sm);
+    }
+
 
     /*********************
         VIEW TOGGLE
