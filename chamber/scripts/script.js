@@ -12,15 +12,15 @@ navButton.addEventListener('click', () => {
 });
 
 // change state of page to current
-navItems.forEach(link => {
-    link.addEventListener("click", (e) => {
-        navItems.forEach(a =>
-            a.parentElement.classList.remove("current")
-        );
+// navItems.forEach(link => {
+//     link.addEventListener("click", (e) => {
+//         navItems.forEach(a =>
+//             a.parentElement.classList.remove("current")
+//         );
 
-        e.currentTarget.parentElement.classList.add("current");
-    });
-});
+//         e.currentTarget.parentElement.classList.add("current");
+//     });
+// });
 
 // Set title of page, update current year and last modified
 document.addEventListener('DOMContentLoaded', () => {
