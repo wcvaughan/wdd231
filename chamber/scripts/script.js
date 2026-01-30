@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const pageName = link.dataset.page;
 
-            pageTitle.textContent = pageName;
+            // pageTitle.textContent = pageName;
 
             document.querySelectorAll('#nav-bar li').forEach(li => {
                 li.classList.remove('current');
