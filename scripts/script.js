@@ -11,34 +11,17 @@ navButton.addEventListener('click', () => {
     navButton.setAttribute("aria-expanded", !expanded);
 });
 
-navItems.forEach(link => {
-    link.addEventListener("click", (e) => {
-        navItems.forEach(a =>
-            a.parentElement.classList.remove("current")
-        );
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-        e.currentTarget.parentElement.classList.add("current");
-    });
+document.querySelectorAll('#nav-bar a').forEach(link => {
+    const linkHref = link.getAttribute('href');
+
+    if (linkHref.endsWith(currentPage)) {
+        link.parentElement.classList.add('current');
+        link.setAttribute('aria-current', 'page');
+    }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('#nav-bar a');
-    const pageTitle = document.querySelector('main h1');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-
-            const pageName = link.dataset.page;
-
-            pageTitle.textContent = pageName;
-
-            document.querySelectorAll('#nav-bar li').forEach(li => {
-                li.classList.remove('current');
-            });
-        });
-    });
-});
 
 
 // Load current date and last modified date
