@@ -125,6 +125,12 @@ button:focus-visible {
     text-decoration: underline;
 }
 
+nav li.current a {
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent);
+}
+
+
 button,
 .navigation a {
     min-height: 44px;
@@ -388,6 +394,22 @@ main h1 {
 .spotlight-card p {
     overflow-wrap: break-word;
     word-break: break-word;
+}
+
+/*********************
+    JOIN
+*********************/
+
+.join-layout {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
 }
 
 /*********************

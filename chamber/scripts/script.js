@@ -11,38 +11,32 @@ navButton.addEventListener('click', () => {
     navButton.setAttribute("aria-expanded", !expanded);
 });
 
-// change state of page to current
-// navItems.forEach(link => {
-//     link.addEventListener("click", (e) => {
-//         navItems.forEach(a =>
-//             a.parentElement.classList.remove("current")
-//         );
+const currentPage = window.location.pathname;
 
-//         e.currentTarget.parentElement.classList.add("current");
-//     });
-// });
+document.querySelectorAll('#nav-bar a').forEach(link => {
+    if (link.getAttribute('href').includes(currentPage)) {
+        link.parentElement.classList.add('current');
+        link.setAttribute('aria-current', 'page');
+    }
+});
 
 // Set title of page, update current year and last modified
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('#nav-bar a');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
+    // footer dates
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent =
+        `Last modified: ${document.lastModified}`;
 
-            document.querySelectorAll('#nav-bar li').forEach(li => {
-                li.classList.remove('current');
-            });
-        });
-    });
-
-    const currentYear = new Date().getFullYear();
-    document.getElementById('currentyear').textContent = currentYear;
-
-    const lastModifiedDate = document.lastModified;
-    document.getElementById('lastModified').textContent = `Last modified: ${lastModifiedDate}`;
+    // load saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        themeToggle.textContent = "☀️";
+    }
 
 });
+
 
 const themeToggle = document.querySelector("#theme-toggle");
 
@@ -55,13 +49,26 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// Load saved preference
-document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme");
 
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-        themeToggle.textContent = "☀️"
-    }
+// timestamp (only if field exists)
+const timestampField = document.getElementById('timestamp');
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
+
+// thankyou page population (only if elements exist)
+if (params.has('fname')) {
+    ['fname','lname','email','phone','business','timestamp'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.textContent = params.get(id);
+        }
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+
+['fname','lname','email','phone','business','timestamp'].forEach(id => {
+    document.getElementById(id).textContent = params.get(id);
 });
 

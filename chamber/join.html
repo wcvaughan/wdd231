@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development Chris Vaughan Chamber of Commerce Project">
+    <meta name="author" content="Chris Vaughan">
+    <meta property="og:description" content="A project page for the Palmer Chamber of Commerce.">
+    <meta property="og:image" content="https://wcvaughan.github.io/wdd231/chamber/images/pexels-emma-buchman.jpg">
+    <meta property="og:title" content="Home | Palmer Chamber of Commerce">
+    <meta property="og:url" content="https://wcvaughan.github.io/wdd231/chamber/index.html">
+
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts stylesheet (REQUIRED) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+
+    <title>Home | Palmer Chamber of Commerce</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="branding">
+            <img src="images/mountain.svg" alt="Site Logo" width="512" height="512">
+            <span>Palmer Chamber of Commerce</span>
+        </div>
+        
+<button 
+    id="ham-btn"
+    class="hamburger"
+    aria-label="Open navigation menu"
+    aria-expanded="false">
+    ☰
+</button>
+
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+
+<main class="page join-layout">
+
+<dialog id="np-modal">
+  <h3>NP Membership Benefits</h3>
+  <p>Community listings, networking events.</p>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<dialog id="bronze-modal">
+  <h3>Bronze Membership Benefits</h3>
+  <p>Directory listing, training discounts.</p>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<dialog id="silver-modal">
+  <h3>Silver Membership Benefits</h3>
+  <p>Advertising opportunities, spotlight eligibility.</p>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<dialog id="gold-modal">
+  <h3>Gold Membership Benefits</h3>
+  <p>Homepage spotlight, premium events, maximum exposure.</p>
+  <button onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<form method="get" action="thankyou.html" class="join-form">
+
+    <h1>Join the Palmer Chamber</h1>
+
+    <label>
+        First Name
+        <input
+            type="text"
+            name="fname"
+            title="Enter your first name"
+            autocomplete="given-name"
+            required
+        >
+    </label>
+
+    <label>
+        Last Name
+        <input
+            type="text"
+            name="lname"
+            title="Enter your last name"
+            autocomplete="family-name"
+            required
+        >
+    </label>
+
+    <label>
+        Organizational Title
+        <input
+            type="text"
+            name="orgtitle"
+            title="Your title within the organization"
+            autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}"
+            placeholder="e.g. Marketing Director"
+        >
+    </label>
+
+    <label>
+        Email Address
+        <input
+            type="email"
+            name="email"
+            title="Enter a valid email address"
+            autocomplete="email"
+            placeholder="example@business.com"
+            required
+        >
+    </label>
+
+    <label>
+        Mobile Phone
+        <input
+            type="tel"
+            name="phone"
+            title="Enter your mobile phone number"
+            autocomplete="tel"
+            required
+        >
+    </label>
+
+    <label>
+        Business / Organization Name
+        <input
+            type="text"
+            name="business"
+            title="Business or organization name"
+            autocomplete="organization"
+            required
+        >
+    </label>
+
+    <label>
+        Membership Level
+        <select name="membership" title="Select a membership level" required>
+            <option value="">Select one</option>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+    </label>
+
+    <label>
+        Business Description
+        <textarea
+            name="description"
+            title="Describe your business"
+            rows="4"
+        ></textarea>
+    </label>
+
+    <!-- Hidden timestamp -->
+    <input type="hidden" name="timestamp" id="timestamp">
+
+    <input type="submit" value="Submit Application">
+
+</form>
+
+<!-- MEMBERSHIP CARDS -->
+<section class="membership-cards">
+    <article class="card animate">
+        <h3>NP Membership</h3>
+        <p>No cost for non-profits</p>
+        <button data-modal="np-modal">View Benefits</button>
+    </article>
+
+    <article class="card animate">
+        <h3>Bronze</h3>
+        <p>Entry-level exposure</p>
+        <button data-modal="bronze-modal">View Benefits</button>
+    </article>
+
+    <article class="card animate">
+        <h3>Silver</h3>
+        <p>Increased promotion</p>
+        <button data-modal="silver-modal">View Benefits</button>
+    </article>
+
+    <article class="card animate">
+        <h3>Gold</h3>
+        <p>Maximum visibility</p>
+        <button data-modal="gold-modal">View Benefits</button>
+    </article>
+</section>
+
+</main>
+
+<footer>
+        <div class="social">
+        <a href="" target="_blank">
+            <img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://mastodon.social/explore" target="_blank">
+            <img src="images/mastodon.svg" alt="Mastodon" width="16" height="16">
+        </a>
+        <a href="" target="_blank">
+            <img src="images/youtube-icon.png" alt="Youtube" width="16" height="16">
+        </a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> Chris Vaughan, Alaska, USA</p>
+    <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>
