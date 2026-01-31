@@ -1,62 +1,81 @@
+/* =============================
+   NAVIGATION TOGGLE
+============================= */
 const navButton = document.querySelector('#ham-btn');
 const navLinks = document.querySelector('#nav-bar');
-const navItems = document.querySelectorAll('#nav-bar a');
 
-// Toggle the show class off and on
-navButton.addEventListener('click', () => {
-    navButton.classList.toggle('show');
-    navLinks.classList.toggle('show');
+if (navButton) {
+    navButton.addEventListener('click', () => {
+        navButton.classList.toggle('show');
+        navLinks.classList.toggle('show');
 
-    const expanded = navButton.getAttribute("aria-expanded") === "true";
-    navButton.setAttribute("aria-expanded", !expanded);
-});
+        const expanded = navButton.getAttribute("aria-expanded") === "true";
+        navButton.setAttribute("aria-expanded", !expanded);
+    });
+}
 
-const currentPage = window.location.pathname;
+/* =============================
+   WAYFINDING (GitHub Pages Safe)
+============================= */
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
 document.querySelectorAll('#nav-bar a').forEach(link => {
-    if (link.getAttribute('href').includes(currentPage)) {
+    const linkPage = link.getAttribute('href');
+
+    if (linkPage === currentPage) {
         link.parentElement.classList.add('current');
         link.setAttribute('aria-current', 'page');
     }
 });
 
-// Set title of page, update current year and last modified
-document.addEventListener('DOMContentLoaded', () => {
+/* =============================
+   FOOTER + THEME LOAD
+============================= */
+const themeToggle = document.querySelector("#theme-toggle");
 
+document.addEventListener('DOMContentLoaded', () => {
     // footer dates
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent =
-        `Last modified: ${document.lastModified}`;
+    const year = document.getElementById('currentyear');
+    const modified = document.getElementById('lastModified');
+
+    if (year) year.textContent = new Date().getFullYear();
+    if (modified) modified.textContent = `Last modified: ${document.lastModified}`;
 
     // load saved theme
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
         document.body.classList.add("dark");
-        themeToggle.textContent = "☀️";
+        if (themeToggle) themeToggle.textContent = "☀️";
     }
-
 });
 
+/* =============================
+   THEME TOGGLE
+============================= */
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
 
-const themeToggle = document.querySelector("#theme-toggle");
+        const isDark = document.body.classList.contains("dark");
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
 
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+}
 
-    const isDark = document.body.classList.contains("dark");
-    themeToggle.textContent = isDark ? "☀️" : "🌙";
-
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-});
-
-
-// timestamp (only if field exists)
+/* =============================
+   TIMESTAMP (JOIN FORM)
+============================= */
 const timestampField = document.getElementById('timestamp');
 if (timestampField) {
     timestampField.value = new Date().toISOString();
 }
 
-// thankyou page population (only if elements exist)
+/* =============================
+   THANK YOU PAGE POPULATION
+============================= */
+const params = new URLSearchParams(window.location.search);
+
 if (params.has('fname')) {
     ['fname','lname','email','phone','business','timestamp'].forEach(id => {
         const el = document.getElementById(id);
@@ -65,10 +84,3 @@ if (params.has('fname')) {
         }
     });
 }
-
-const params = new URLSearchParams(window.location.search);
-
-['fname','lname','email','phone','business','timestamp'].forEach(id => {
-    document.getElementById(id).textContent = params.get(id);
-});
-
