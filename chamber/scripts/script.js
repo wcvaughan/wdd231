@@ -23,7 +23,7 @@ document.querySelectorAll('#nav-bar a').forEach(link => {
     const linkPage = link.getAttribute('href');
 
     if (linkPage === currentPage) {
-        link.parentElement.classList.add('current');
+        link.parentElement.classList.add('active');
         link.setAttribute('aria-current', 'page');
     }
 });
