@@ -64,6 +64,41 @@ if (themeToggle) {
 }
 
 /* =============================
+   MEMBERSHIP MODALS
+============================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const modalButtons = document.querySelectorAll('[data-modal]');
+    const dialogs = document.querySelectorAll('dialog');
+
+    modalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.dataset.modal;
+            const dialog = document.getElementById(modalId);
+
+            if (dialog) {
+                dialog.showModal();
+            }
+        });
+    });
+
+    // Close modal when clicking outside dialog content
+    dialogs.forEach(dialog => {
+        dialog.addEventListener('click', (event) => {
+            const rect = dialog.getBoundingClientRect();
+            const clickedOutside = 
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.botton;
+
+            if (clickedOutside) {
+                dialog.close();
+            }
+        });
+    });
+});
+
+/* =============================
    TIMESTAMP (JOIN FORM)
 ============================= */
 const timestampField = document.getElementById('timestamp');

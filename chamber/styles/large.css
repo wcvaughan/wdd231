@@ -135,6 +135,28 @@
     }
 
     /*********************
+        JOIN
+    *********************/
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .join-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .join-form h1,
+    .join-form textarea,
+    .join-form input[type="submit"] {
+        grid-column: 1 / -1;
+    }
+
+    .membership-cards {
+        margin-top: 4rem;
+    }
+
+    /*********************
         DISCOVER
     *********************/
     .discover-grid {
