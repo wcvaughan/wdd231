@@ -409,6 +409,56 @@ main h1 {
 }
 
 /*********************
+    DISCOVER
+*********************/
+
+.discover-grid {
+    display: grid;
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: var(--space-md);
+}
+
+.card1 { grid-area: card1; }
+.card2 { grid-area: card2; }
+.card3 { grid-area: card3; }
+.card4 { grid-area: card4; }
+.card5 { grid-area: card5; }
+.card6 { grid-area: card6; }
+.card7 { grid-area: card7; }
+.card8 { grid-area: card8; }
+
+.visit-message {
+    background-color: #eef6f3;
+    padding: var(--space-md);
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #2a7f62;
+    font-weight: 600;
+}
+
+.discover-card {
+    background: #fff;
+    padding: var(--space-md);
+    border-radius: 6px;
+}
+
+.discover-card figure {
+    margin: 0;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+}
+
+/*********************
     FOOTER
 *********************/
 footer {
