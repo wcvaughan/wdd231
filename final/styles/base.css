@@ -372,6 +372,52 @@ a {
 .animate-delay-3 { animation-delay: 0.4s; }
 
 
+/* ==========================
+   THANK YOU PAGE
+========================== */
+
+.thankyou-layout {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.thankyou-card {
+  max-width: 500px;
+  text-align: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.thankyou-card h1 {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+.thankyou-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+/* Reusable primary button */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #16372a;
+}
+
 
 /* ==========================
    FOOTER
