@@ -46,6 +46,15 @@ a:focus {
     justify-self: end;
   }
   /* HOME PAGE GRID */
+  .page {
+    display: grid;
+    grid-template-areas: 
+      "card1"
+      "card2 card3"
+      "card4 card5"
+    ;
+    gap: var(--space-xl);
+  }
 
 
   /* WEATHER + FORECAST ROW */
@@ -64,18 +73,33 @@ a:focus {
     grid-column: span 2;
   }
 
-  /* NEWSLETTER PAGE */
-  .page {
-    display: grid;
-    grid-template-areas: 
-      "card1"
-      "card 2 card 3"
-      "card 4 card 5"
-    ;
-    gap: var(--space-xl);
+/* ==========================
+   NEWSLETTER PAGE
+========================== */
+
+.newsletter-layout {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+
+  .newsletter-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
   }
 
-  .benefits-list {
-    grid-column: 2;
+  .join-form {
+    grid-template-columns: 1fr 1fr;
   }
+
+  .join-form h1,
+  .join-form p,
+  .join-form fieldset,
+  .join-form input[type="submit"] {
+    grid-column: 1 / -1;
+  }
+
 }
+
+
+

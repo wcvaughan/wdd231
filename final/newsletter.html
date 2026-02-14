@@ -17,9 +17,9 @@
     <!-- Google Fonts stylesheet (REQUIRED) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
-    <link rel="stylesheet" href="styles/normalize.css">
     <script type="module" src="scripts/main.js"></script>
     <script src="scripts/newsletter.js" defer></script>
 
@@ -31,7 +31,7 @@
 <body>
     <header class="site-header">
         <div class="branding">
-            <img src="" alt="Site Logo" width="512" height="512">
+            <img src="images\mountain.svg" alt="Site Logo" width="512" height="512">
             <span>Mat-Su Trails Explorer</span>
         </div>
 
@@ -50,58 +50,53 @@
     </header>
     
 
-<main class="page">
+<main class="newsletter-layout">
 
-    <section class="newsletter-intro">
-        <h1>Join the Mat-Su Trails Newsletter</h1>
-        <p>Get trail updates, seasonal hiking tips, and weather alerts delivered monthly.</p>
-    </section>
 
-    <section class="sign-up-form">
-        <form method="get" action="thankyou.html" id="newsletter-form">
+<form method="get" action="thankyou.html" id="newsletter-form" class="join-form animate-in animate-delay-1">
+    <h1>Join the Mat-Su Trails Newsletter</h1>
+    <p>Get trail updates, seasonal hiking tips, and weather alerts delivered monthly.</p>
+    
+    <label for="fullname">Full Name</label>
+    <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        required
+        minlength="3"
+        placeholder="John Muir">
 
-            <label for="fullname">Full Name</label>
-            <input
-                type="text"
-                id="fullname"
-                name="fullname"
-                required
-                minlength="3"
-                placeholder="John Muir">
+    <label for="email">Email Address</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="example@email.com">
 
-            <label for="email">Email Address</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="example@email.com">
+    <fieldset class="interests">
+        <legend>Trail Interests</legend>
 
-            <fieldset>
-                <legend>Trail Interests</legend>
+        <label>
+            Easy Trails
+            <input type="checkbox" name="interest" value="Easy Trails">
+        </label>
 
-                <label>
-                    <input type="checkbox" name="interest" value="Easy Trails">
-                    Easy Trails
-                </label>
+        <label>
+            Moderate Trails
+            <input type="checkbox" name="interest" value="Moderate Trails">
+        </label>
 
-                <label>
-                    <input type="checkbox" name="interest" value="Moderate Trails">
-                    Moderate Trails
-                </label>
+        <label>
+            Hard Trails
+            <input type="checkbox" name="interest" value="Hard Trails">
+        </label>
+    </fieldset>
 
-                <label>
-                    <input type="checkbox" name="interest" value="Hard Trails">
-                    Hard Trails
-                </label>
-            </fieldset>
+    <input type="submit" value="Submit Application">
+</form>
 
-            <button type="submit">Subscribe</button>
-
-        </form>
-    </section>
-
-    <section class="benefits-list">
+    <section class="benefits-list animate-in animate-delay-2">
         <h2>Why Subscribe?</h2>
         <ul>
             <li>Monthly trail highlights</li>
@@ -119,6 +114,9 @@
         </a>
         <a href="https://github.com/wcvaughan" target="_blank">
             <img src="images/github.svg" alt="GitHub" width="16" height="16">
+        </a>
+        <a href="https://www.youtube.com/@Chris-byupathways" target="_blank">
+            <img src="images/youtube-icon.png" alt="Youtube" width="16" height="16">
         </a>
     </div>
 

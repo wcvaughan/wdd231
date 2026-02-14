@@ -8,6 +8,11 @@
   --text-dark: #222;
   --text-light: #fff;
   --bg-light: #ffffff;
+  --border-color: #ddd;
+
+  --card-bg: #ffffff;
+  --text-primary: #222;
+  --text-secondary: #555;
 
   --radius: 0.75rem;
   --space-xs: 0.5rem;
@@ -19,6 +24,8 @@
   --max-width: 1200px;
   --font-main: "Roboto", sans-serif;
 }
+
+
 
 /* ==========================
    RESET / BASE
@@ -34,7 +41,7 @@ body {
   font-family: var(--font-main);
   line-height: 1.6;
   background: var(--bg-light);
-  color: var(--text-dark);
+  color: var(--text-primary);
 }
 
 img {
@@ -176,6 +183,16 @@ a {
   margin-top: var(--space-lg);
 }
 
+.trail-details {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.trail-details p {
+  color: var(--text-secondary);
+}
+
 .trail-item {
   background: var(--secondary);
   padding: var(--space-md);
@@ -236,48 +253,128 @@ a {
 }
 
 /* ==========================
-   NEWSLETTER FORM
+   JOIN LAYOUT
 ========================== */
-.newsletter,
-.sign-up-form,
-.benefits-list {
-  background: var(--secondary);
-  padding: var(--space-md);
+
+.join-layout {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.join-form {
+  display: grid;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--card-bg);
   border-radius: var(--radius);
-  margin-top: var(--space-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);;
 }
 
-form label {
-  display: block;
-  margin-bottom: var(--space-sm);
+/* Form Headline */
+.join-form h1 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.75rem;
 }
 
-input,
-textarea,
-select {
-  width: 100%;
-  padding: var(--space-sm);
-  border-radius: var(--radius);
-  border: 1px solid #ccc;
+/* Labels */
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-input[type="submit"] {
+/* Inputs */
+.join-form input,
+.join-form select,
+.join-form textarea {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--border-color);
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--bg-light);
+  color: var(--text-primary);
+}
+
+/* Focus State */
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-color: transparent;
+}
+
+/* Submit Button */
+.join-form input[type="submit"] {
+  margin-top: var(--space-md);
+  padding: 0.85rem;
   background: var(--primary);
   color: white;
+  font-weight: 700;
   border: none;
-  margin-top: var(--space-md);
+  border-radius: var(--radius);
   cursor: pointer;
+  transition: background 0.3s ease;
 }
+
+.join-form input[type="submit"]:hover {
+  background: #16372a;
+}
+
+.interests {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.interests legend {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+/* ==========================
+   ENTRANCE ANIMATION
+========================== */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.25s; }
+.animate-delay-3 { animation-delay: 0.4s; }
+
+
 
 /* ==========================
    FOOTER
 ========================== */
 footer {
+  text-align: center;
   margin-top: var(--space-xl);
   padding: var(--space-lg);
   background: var(--primary);
   color: white;
-  text-align: center;
+  border-top: 1px solid var(--border-color);
 }
 
 .social {
@@ -287,21 +384,29 @@ footer {
   margin-bottom: var(--space-sm);
 }
 
+.social a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
 /* ==========================
    DARK MODE
 ========================== */
 body.dark {
-  background: #121212;
-  color: #eee;
+  --bg-light: #121212;
+  --secondary: #1e1e1e;
+  --card-bg: #1e1e1e;
+  --text-primary: #f1f1f1;
+  --text-secondary: #bbbbbb;
+  --border-color: #333;
 }
 
-body.dark .site-header,
 body.dark footer {
   background: #000;
 }
 
-body.dark .trail-item,
-body.dark .weather,
-body.dark .forecast {
-  background: #1e1e1e;
-}
