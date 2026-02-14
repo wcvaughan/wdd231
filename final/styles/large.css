@@ -1,0 +1,81 @@
+@media (min-width: 768px) {
+
+  /* HEADER */
+  .site-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  button:focus,
+a:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+  .navigation {
+    display: block !important;
+    width: auto;
+    background: none;
+  }
+
+  .navigation ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+  }
+
+  .navigation li {
+    border: none;
+  }
+
+  .navigation a {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .navigation a:hover {
+  background: rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+}
+
+  .header-controls {
+    justify-self: end;
+  }
+  /* HOME PAGE GRID */
+
+
+  /* WEATHER + FORECAST ROW */
+  .weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* TRAIL DETAIL LAYOUT */
+  .trail-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-gallery {
+    grid-column: span 2;
+  }
+
+  /* NEWSLETTER PAGE */
+  .page {
+    display: grid;
+    grid-template-areas: 
+      "card1"
+      "card 2 card 3"
+      "card 4 card 5"
+    ;
+    gap: var(--space-xl);
+  }
+
+  .benefits-list {
+    grid-column: 2;
+  }
+}

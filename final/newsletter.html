@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for the Mat-Su Trails newsletter to receive monthly hiking updates, trail highlights, and weather alerts.">
+    <meta name="author" content="Chris Vaughan">
+    <meta property="og:description" content="A trails app dedicated to the Mat-Su Valley">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="Mat-Su Trails Explorer">
+    <meta property="og:url" content="https://wcvaughan.github.io/wdd231/final/newsletter.html">
+
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts stylesheet (REQUIRED) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/newsletter.js" defer></script>
+
+
+    <title>Newsletter Signup | Mat-Su Trails Explorer</title>
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="branding">
+            <img src="" alt="Site Logo" width="512" height="512">
+            <span>Mat-Su Trails Explorer</span>
+        </div>
+
+<div class="header-controls">
+  <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+</div>
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html" rel="noopener">Home</a></li>
+                <li><a href="trail.html" rel="noopener">Trails</a></li>
+                <li><a href="newsletter.html" rel="noopener" aria-current="page">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+<main class="page">
+
+    <section class="newsletter-intro">
+        <h1>Join the Mat-Su Trails Newsletter</h1>
+        <p>Get trail updates, seasonal hiking tips, and weather alerts delivered monthly.</p>
+    </section>
+
+    <section class="sign-up-form">
+        <form method="get" action="thankyou.html" id="newsletter-form">
+
+            <label for="fullname">Full Name</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                required
+                minlength="3"
+                placeholder="John Muir">
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@email.com">
+
+            <fieldset>
+                <legend>Trail Interests</legend>
+
+                <label>
+                    <input type="checkbox" name="interest" value="Easy Trails">
+                    Easy Trails
+                </label>
+
+                <label>
+                    <input type="checkbox" name="interest" value="Moderate Trails">
+                    Moderate Trails
+                </label>
+
+                <label>
+                    <input type="checkbox" name="interest" value="Hard Trails">
+                    Hard Trails
+                </label>
+            </fieldset>
+
+            <button type="submit">Subscribe</button>
+
+        </form>
+    </section>
+
+    <section class="benefits-list">
+        <h2>Why Subscribe?</h2>
+        <ul>
+            <li>Monthly trail highlights</li>
+            <li>Safety alerts</li>
+            <li>Local hiking events</li>
+            <li>Seasonal recommendations</li>
+        </ul>
+    </section>
+
+</main>
+    <footer>
+        <div class="social">
+        <a href="https://www.linkedin.com/in/william-vaughan-juniorsoftwareengineer/" target="_blank">
+            <img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+        </a>
+        <a href="https://github.com/wcvaughan" target="_blank">
+            <img src="images/github.svg" alt="GitHub" width="16" height="16">
+        </a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> Chris Vaughan, Alaska, USA</p>
+    <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>

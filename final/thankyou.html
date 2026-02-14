@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You | Mat-Su Trails Explorer</title>
+  <meta name="description" content="Newsletter subscription confirmation">
+  <meta name="author" content="Chris Vaughan">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body>
+
+<main>
+  <h1>Thank You for Subscribing!</h1>
+
+  <p><strong>Name:</strong> <span id="display-name"></span></p>
+  <p><strong>Email:</strong> <span id="display-email"></span></p>
+
+  <a href="index.html" target="_blank" rel="noopener">Return Home</a>
+</main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("display-name").textContent = params.get("fullname");
+  document.getElementById("display-email").textContent = params.get("email");
+</script>
+
+</body>
+</html>

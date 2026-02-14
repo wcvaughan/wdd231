@@ -1,0 +1,152 @@
+[
+  {
+    "id": "hatcher-pass",
+    "name": "Hatcher Pass Summit Trail",
+    "difficulty": "Moderate",
+    "distance": "4.5 miles",
+    "location": "Hatcher Pass",
+    "elevation": "1,200 ft gain",
+    "image": "images/hatcher.webp",
+    "description": "Scenic alpine trail with sweeping mountain views and wildflowers."
+  },
+  {
+    "id": "lazy-mountain",
+    "name": "Lazy Mountain Trail",
+    "difficulty": "Hard",
+    "distance": "6.1 miles",
+    "location": "Palmer",
+    "elevation": "3,000 ft gain",
+    "image": "images/lazymountain.webp",
+    "description": "Steep climb offering panoramic views of the Mat-Su Valley."
+  },
+  {
+    "id": "matanuska-lake",
+    "name": "Matanuska Lake Loop",
+    "difficulty": "Easy",
+    "distance": "2.3 miles",
+    "location": "Palmer",
+    "elevation": "150 ft gain",
+    "image": "images/matanuskalake.webp",
+    "description": "Family-friendly loop with lakeside views and wildlife sightings."
+  },
+  {
+    "id": "bodenburg-butte",
+    "name": "Bodenburg Butte",
+    "difficulty": "Moderate",
+    "distance": "1.5 miles",
+    "location": "Palmer",
+    "elevation": "800 ft gain",
+    "image": "images/butte.webp",
+    "description": "Short but rewarding hike with valley views."
+  },
+  {
+    "id": "reflections-lake",
+    "name": "Reflections Lake Trail",
+    "difficulty": "Easy",
+    "distance": "1.2 miles",
+    "location": "Wasilla",
+    "elevation": "Minimal gain",
+    "image": "images/reflections.webp",
+    "description": "Flat lakeside walk perfect for families and beginners."
+  },
+  {
+    "id": "government-peak",
+    "name": "Government Peak",
+    "difficulty": "Hard",
+    "distance": "8 miles",
+    "location": "Hatcher Pass",
+    "elevation": "3,500 ft gain",
+    "image": "images/govpeak.webp",
+    "description": "Challenging summit hike with expansive alpine scenery."
+  },
+  {
+    "id": "reed-lakes",
+    "name": "Reed Lakes Trail",
+    "difficulty": "Hard",
+    "distance": "9 miles",
+    "location": "Hatcher Pass",
+    "elevation": "2,200 ft gain",
+    "image": "images/reed.webp",
+    "description": "Popular alpine lake hike with rocky terrain."
+  },
+  {
+    "id": "archangel",
+    "name": "Archangel Valley Trail",
+    "difficulty": "Moderate",
+    "distance": "5 miles",
+    "location": "Hatcher Pass",
+    "elevation": "900 ft gain",
+    "image": "images/archangel.webp",
+    "description": "Historic mining area with scenic valley views."
+  },
+  {
+    "id": "pioneer-peak",
+    "name": "Pioneer Peak",
+    "difficulty": "Hard",
+    "distance": "7 miles",
+    "location": "Palmer",
+    "elevation": "3,800 ft gain",
+    "image": "images/pioneer.webp",
+    "description": "Strenuous ascent with incredible summit views."
+  },
+  {
+    "id": "wasilla-creek",
+    "name": "Wasilla Creek Trail",
+    "difficulty": "Easy",
+    "distance": "2.5 miles",
+    "location": "Wasilla",
+    "elevation": "200 ft gain",
+    "image": "images/creek.webp",
+    "description": "Peaceful wooded trail following a creek."
+  },
+  {
+    "id": "cottonwood-lake",
+    "name": "Cottonwood Lake Trail",
+    "difficulty": "Easy",
+    "distance": "1.8 miles",
+    "location": "Wasilla",
+    "elevation": "Minimal gain",
+    "image": "images/cottonwood.webp",
+    "description": "Gentle walk around the lake with picnic areas."
+  },
+  {
+    "id": "eska-falls",
+    "name": "Eska Falls",
+    "difficulty": "Moderate",
+    "distance": "4 miles",
+    "location": "Sutton",
+    "elevation": "600 ft gain",
+    "image": "images/eska.webp",
+    "description": "Trail leading to scenic waterfalls."
+  },
+  {
+    "id": "fishhook-creek",
+    "name": "Fishhook Creek Trail",
+    "difficulty": "Moderate",
+    "distance": "3.2 miles",
+    "location": "Hatcher Pass",
+    "elevation": "700 ft gain",
+    "image": "images/fishhook.webp",
+    "description": "Creekside hiking with alpine surroundings."
+  },
+  {
+    "id": "gold-mint",
+    "name": "Gold Mint Trail",
+    "difficulty": "Moderate",
+    "distance": "5 miles",
+    "location": "Hatcher Pass",
+    "elevation": "1,000 ft gain",
+    "image": "images/goldmint.webp",
+    "description": "Popular summer hike with glacier views."
+  },
+  {
+    "id": "marmot-mountain",
+    "name": "Marmot Mountain Trail",
+    "difficulty": "Hard",
+    "distance": "6.5 miles",
+    "location": "Hatcher Pass",
+    "elevation": "2,800 ft gain",
+    "image": "images/marmot.webp",
+    "description": "Steep alpine climb with wildlife sightings."
+  }
+]

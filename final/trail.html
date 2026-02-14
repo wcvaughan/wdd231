@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore hiking trails in Alaska's Mat-Su Valley with weather updates, trail details, and safety tips.">
+    <meta name="description" content="Detailed information about hiking trails in the Mat-Su Valley including difficulty, distance, and safety guidance.">
     <meta name="author" content="Chris Vaughan">
     <meta property="og:description" content="A trails app dedicated to the Mat-Su Valley">
     <meta property="og:image" content="">
     <meta property="og:title" content="Mat-Su Trails Explorer">
-    <meta property="og:url" content="https://wcvaughan.github.io/wdd231/final/index.html">
+    <meta property="og:url" content="https://wcvaughan.github.io/wdd231/final/trail.html">
 
     <!-- Google Fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,18 +21,19 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/trails.js"></script>
+    <script type="module" src="scripts/traildetail.js"></script>
     <script type="module" src="scripts/weather.js"></script>
 
 
-    <title>Mat-Su Trails Explorer | Home</title>
+    <title>Trail Details | Mat-Su Trails Explorer</title>
 
 </head>
 
 <body>
     <header class="site-header">
         <div class="branding">
-            <img src="images\mountain.svg" alt="Site Logo" width="512" height="512">
+            <img src="" alt="Site Logo" width="512" height="512">
+            <span>Mat-Su Trails Explorer</span>
         </div>
         
 <div class="header-controls">
@@ -42,8 +43,8 @@
 
         <nav id="nav-bar" class="navigation">
             <ul>
-                <li><a href="index.html" rel="noopener" aria-current="page">Home</a></li>
-                <li><a href="trail.html">Trails</a></li>
+                <li><a href="index.html" rel="noopener">Home</a></li>
+                <li><a href="trail.html" rel="noopener" aria-current="page">Trails</a></li>
                 <li><a href="newsletter.html" rel="noopener">Newsletter</a></li>
             </ul>
         </nav>
@@ -54,33 +55,39 @@
 
 <!-- HERO -->
 <section class="hero">
-    <img 
-        src="images/hero-image.webp"
-        alt="Hatcher Pass"
-        loading="eager"
+    <img id="trail-hero-img"
+        src=""
+        alt=""
         width="1600"
-        height="auto"
-    >
+        height="600"
+        loading="eager">
     <div class="hero-content">
-        <h1>Mat-Su Trails Explorer</h1>
-        <p></p>
+        <h1 id="trail-name"></h1>
+        <p id="trail-location"></p>
     </div>
 </section>
 
-<section class="trail-card">
+<section class="trail-details">
+    <div class="trail-stats-card" id="trail-stats"></div>
 
-    <section class="trail-map">
+    <div class="trail-description">
+        <h2>About This Trail</h2>
+        <p id="trail-description"></p>
+    </div>
 
-    </section>
-
-    <section class="highlights">
-
-    </section>
-
-    <section class="safety-tips">
-
-    </section>
+    <button id="open-modal">Trail Safety Info</button>
 </section>
+
+<dialog id="trail-modal">
+    <h2>Safety Tips</h2>
+    <ul>
+        <li>Check weather conditions before hiking.</li>
+        <li>Carry sufficient water and snacks.</li>
+        <li>Tell someone your hiking plan.</li>
+        <li>Wear proper footwear.</li>
+    </ul>
+    <button id="close-modal">Close</button>
+</dialog>
 
     <!-- WEATHER -->
 <section class="weather">
